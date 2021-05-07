@@ -1,0 +1,21 @@
+<h2> List of Admins</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>num</th>
+            <th>emailID</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let admin of admins" >
+            <td> {{ admin.aname }} </td>
+            <td> {{ admin.anum }} </td>
+            <td>{{ admin.aemail }}</td>
+            <td>
+                <button (click) = "updateAdmin(admin.aemail)" class = "btn btn-info"> Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+<h2> Employee List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>num</th>
+            <th>company</th>
+            <th>location</th>
+            <th>skills</th>
+            <th>emailID</th>
+            <th>demandID</th>
+            <th>bgCheck</th>
+            <th>boardingStatus</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let onboardee of onboardees" >
+            <td> {{ onboardee.name }} </td>
+            <td> {{ onboardee.age }} </td>
+            <td> {{ onboardee.num }} </td>
+            <td>{{onboardee.company}}</td>
+            <td>{{onboardee.location}}</td>
+            <td>{{onboardee.skills}}</td>
+            <td>{{onboardee.emailID}}</td>
+            <td>{{onboardee.demandID}}</td>
+            <td>{{onboardee.bgCheck}}</td>
+            <td>{{onboardee.boardingStatus}}</td>
+            <td>
+                <button (click) = "updateOnboardee(onboardee.emailID)" class="btn-btn-info">Update</button>
+            </td>
+            <!-- <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>
