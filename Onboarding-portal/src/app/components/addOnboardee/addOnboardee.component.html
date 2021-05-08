@@ -1,0 +1,74 @@
+
+<div class="col-md-6 offset-md-3">
+  <h3> Add Onboardee </h3>
+  <form (ngSubmit) = "onSubmit()">
+  
+      <div class="form-group">
+          <label> Name</label>
+          <input type="text" class ="form-control" id = "name"
+              [(ngModel)] = "onboardee.name" name = "name" value="Enter Name">
+      </div>
+  
+      <div class="form-group">
+          <label> Age</label>
+          <input type="tel" class ="form-control" id = "age"
+              [(ngModel)] = "onboardee.age" name = "age" value="Enter Age">
+      </div>
+  
+      <div class="form-group">
+          <label> Email Id</label>
+          <input type="text" class ="form-control" id = "emailID"
+              [(ngModel)] = "onboardee.emailID" name = "emailID" value="Email Address">
+      </div>
+  
+      <div class="form-group">
+          <label> Number</label>
+          <input type="text" class ="form-control" id = "num"
+              [(ngModel)] = "onboardee.num" name = "num" value="Enter Phone Number">
+      </div>
+
+      <div class="form-group">
+        <label> Company</label>
+        <input type="text" class ="form-control" id = "company"
+            [(ngModel)] = "onboardee.company" name = "company" value="Enter Company">
+    </div>
+
+    <div class="form-group">
+        <label> Location</label>
+        <input type="text" class ="form-control" id = "location"
+            [(ngModel)] = "onboardee.location" name = "location" value="Enter Location">
+    </div>
+
+    <div class="form-group">
+        <label> CGPA</label>
+        <input type="number" class ="form-control" id = "cgpa"
+            [(ngModel)] = "onboardee.cgpa" name = "cgpa" value= "Enter CGPA">
+    </div>
+
+    <div class="form-group">
+        <label> Skills</label>
+        <input type="textarea" class ="form-control" id = "skills"
+            [(ngModel)] = "onboardee.skills" name = "skills" value= "Enter Skills">
+    </div>
+
+    <div class="form-group">
+        <label> DemandID</label>
+        <input type="text" class ="form-control" id = "demandID"
+            [(ngModel)] = "onboardee.demandID" name = "demandID" value= "Enter DemandID">
+    </div>
+
+    <div class="form-group">
+        <label> Background Check Status</label>
+        <input type="text" class ="form-control" id = "bgCheck"
+            [(ngModel)] = "onboardee.bgCheck" name = "bgCheck" value= "Enter Background Check Status">
+    </div>
+
+    <div class="form-group">
+        <label> Onboarding Status</label>
+        <input type="text" class ="form-control" id = "boardingStatus"
+            [(ngModel)] = "onboardee.boardingStatus" name = "boardingStatus" value= "Enter Onboarding Status">
+    </div>
+      <button class = "btn btn-success" type ="submit">Submit</button>
+  
+  </form>
+  </div> 
