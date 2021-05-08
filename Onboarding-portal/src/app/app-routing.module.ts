@@ -8,6 +8,7 @@ import { AddAdminComponent } from './components/addAdmin/addAdmin.component';
 import { UpdateOnboardeeComponent } from './components/updateOnboardee/updateOnboardee.component';
 import { UpdateAdminComponent } from './components/updateAdmin/updateAdmin.component';
 import { LoginComponent } from './components/login/login.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'addOnboardee' ,component:AddOnboardeeComponent},
   { path: 'addAdmin' ,component:AddAdminComponent},
   { path: 'updateOnboardee/:emailID', component:UpdateOnboardeeComponent},
-  { path: 'updateAdmin/:aemail', component:UpdateAdminComponent}
+  { path: 'updateAdmin/:aemail', component:UpdateAdminComponent},
+  { path: 'chart', component:ChartComponent}
 ];
 
 @NgModule({

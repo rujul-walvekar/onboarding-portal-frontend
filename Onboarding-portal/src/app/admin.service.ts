@@ -24,7 +24,7 @@ export class AdminService {
   updateAdmin(aemail: string, admin: Admin): Observable<Object>{
     return this.httpClient.put(`${this.baseURL}`+`/recruiter`, admin);
   }
-  deleteOnboardee(aemail: string): Observable<any>{
+  deleteAdmin(aemail: string): Observable<any>{
     return this.httpClient.delete(`${this.baseURL}`+`/recruiter`+ `/${aemail}`);
   }
 }
