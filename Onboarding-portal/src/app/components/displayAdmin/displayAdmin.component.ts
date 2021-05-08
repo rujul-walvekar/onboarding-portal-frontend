@@ -27,8 +27,14 @@ export class DisplayAdminComponent implements OnInit {
   deleteAdmin(aemail: string){
     this.adminService.deleteAdmin(aemail).subscribe((data)=>{
       alert('Admin Deleted Succesfully');
-      this.router.navigate(['displayOnboardee'])
+      // this.router.navigateUrl(['displayOnboardee'])
+      // this.router.navigate(['displayAdmin'])
+       let currentUrl = this.router.url;
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+            this.router.navigate([currentUrl]);
     })
-  }
+  
+  })
 
+}
 }

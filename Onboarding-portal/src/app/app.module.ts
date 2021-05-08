@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DisplayOnboardeeComponent} from './components/displayOnboardee/displayOnboardee.component';
 import { RouterModule} from "@angular/router";
 import { FormsModule} from "@angular/forms";
+import { ChartModule } from 'angular-highcharts';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule} from 'angularx-social-login';
 
 import { HttpClientModule } from '@angular/common/http'
@@ -14,6 +15,7 @@ import { AddOnboardeeComponent } from './components/addOnboardee/addOnboardee.co
 import { AddAdminComponent } from './components/addAdmin/addAdmin.component';
 import { UpdateAdminComponent } from './components/updateAdmin/updateAdmin.component';
 import { UpdateOnboardeeComponent } from './components/updateOnboardee/updateOnboardee.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { UpdateOnboardeeComponent } from './components/updateOnboardee/updateOnb
     AddOnboardeeComponent,
     AddAdminComponent,
     UpdateOnboardeeComponent,
-    UpdateAdminComponent
+    UpdateAdminComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { UpdateOnboardeeComponent } from './components/updateOnboardee/updateOnb
     RouterModule,
     HttpClientModule,
     FormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    ChartModule
   ],
   providers: [
     {
