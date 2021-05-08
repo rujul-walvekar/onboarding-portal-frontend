@@ -25,7 +25,10 @@ export class DisplayOnboardeeComponent implements OnInit {
   deleteOnboardee(emailID: string){
     this.onboardeeService.deleteOnboardee(emailID).subscribe((data)=>{
       alert('Onboardee Deleted Succesfully');
-      this.router.navigate(['displayOnboardee'])
+      let currentUrl = this.router.url;
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+            this.router.navigate([currentUrl]);
+    })
     })
   }
 
