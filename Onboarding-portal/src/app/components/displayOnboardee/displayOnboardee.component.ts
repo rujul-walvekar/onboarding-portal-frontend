@@ -22,5 +22,11 @@ export class DisplayOnboardeeComponent implements OnInit {
   updateOnboardee(emailID: string){
     this.router.navigate(['updateOnboardee', emailID]);
   }
+  deleteOnboardee(emailID: string){
+    this.onboardeeService.deleteOnboardee(emailID).subscribe((data)=>{
+      alert('Onboardee Deleted Succesfully');
+      this.router.navigate(['displayOnboardee'])
+    })
+  }
 
 }
