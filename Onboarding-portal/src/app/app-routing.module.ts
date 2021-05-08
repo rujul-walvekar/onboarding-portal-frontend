@@ -7,11 +7,11 @@ import { AddOnboardeeComponent} from './components/addOnboardee/addOnboardee.com
 import { AddAdminComponent } from './components/addAdmin/addAdmin.component';
 import { UpdateOnboardeeComponent } from './components/updateOnboardee/updateOnboardee.component';
 import { UpdateAdminComponent } from './components/updateAdmin/updateAdmin.component';
-// import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/displayOnboardee', pathMatch: 'full' },
-  // { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   { path: 'displayOnboardee' , component:DisplayOnboardeeComponent},
   { path: 'displayAdmin' , component:DisplayAdminComponent},
   { path: 'addOnboardee' ,component:AddOnboardeeComponent},

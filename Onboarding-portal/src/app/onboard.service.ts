@@ -24,7 +24,10 @@ export class OnboardService {
   }
 
   updateOnboardee(emailID: string, onboardee: Onboardee): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}`+`/updateOnboardee`+`/${emailID}`, onboardee);
+    return this.httpClient.put(`${this.baseURL}`+`/updateOnboardee`, onboardee);
+  }
+  deleteOnboardee(emailID: string): Observable<any>{
+    return this.httpClient.delete(`${this.baseURL}`+`/onboardee`+ `/${emailID}`);
   }
 
 

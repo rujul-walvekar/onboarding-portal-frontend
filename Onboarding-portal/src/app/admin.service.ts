@@ -22,6 +22,9 @@ export class AdminService {
     return this.httpClient.get<Admin>(`${this.baseURL}`+`/recruiter`+`/${aemail}`);
   }
   updateAdmin(aemail: string, admin: Admin): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}`+`/recruiter`+`/${aemail}`, admin);
+    return this.httpClient.put(`${this.baseURL}`+`/recruiter`, admin);
+  }
+  deleteOnboardee(aemail: string): Observable<any>{
+    return this.httpClient.delete(`${this.baseURL}`+`/recruiter`+ `/${aemail}`);
   }
 }
