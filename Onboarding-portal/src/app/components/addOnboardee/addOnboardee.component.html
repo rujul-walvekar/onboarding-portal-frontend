@@ -21,7 +21,7 @@
 
     <div class="form-group">
       <label> Number</label>
-      <input type="text" class="form-control" id="num" [(ngModel)]="onboardee.num" name="num" value="Enter Phone Number"
+      <input type="tel" class="form-control" id="num" [(ngModel)]="onboardee.num" name="num" value="Enter Phone Number " pattern="^\d{10}$" minlength="10"
         required>
     </div>
 
