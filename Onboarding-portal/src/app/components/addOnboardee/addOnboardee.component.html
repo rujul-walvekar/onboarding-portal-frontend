@@ -1,6 +1,6 @@
 <div class="col-md-6 offset-md-3">
   <h3> Add Onboardee </h3>
-  <form (ngSubmit)="onSubmit()">
+  <form ngNativeValidate (ngSubmit)="onSubmit()">
 
     <div class="form-group">
       <label> Name</label>
@@ -10,7 +10,7 @@
 
     <div class="form-group">
       <label> Age</label>
-      <input type="tel" class="form-control" id="age" [(ngModel)]="onboardee.age" name="age" value="Enter Age" required>
+      <input type="tel" class="form-control" id="age" [(ngModel)]="onboardee.age" name="age" value="Enter Age" required minlenght=10>
     </div>
 
     <div class="form-group">
@@ -24,6 +24,8 @@
       <input type="text" class="form-control" id="num" [(ngModel)]="onboardee.num" name="num" value="Enter Phone Number"
         required>
     </div>
+
+    
 
     <div class="form-group">
       <label> Company</label>
@@ -44,7 +46,7 @@
 
     <div class="form-group">
       <label> CGPA</label>
-      <input type="number" class="form-control" id="cgpa" [(ngModel)]="onboardee.cgpa" name="cgpa" value="Enter CGPA"
+      <input type="number" step="0.01" placeholder="0.00" class="form-control" id="cgpa" [(ngModel)]="onboardee.cgpa" name="cgpa" value="Enter CGPA"
         required>
     </div>
 
@@ -72,7 +74,7 @@
     </div>
     <div class="form-group">
       <label> Onboarding Status</label>
-      <select name="bgCheck" class="form-control" id="bgCheck" [(ngModel)]="onboardee.boardingStatus" required>
+      <select name="bgCheck" class="form-control" id="bgCheck" [(ngModel)]="onboardee.boardingStatus">
         <option value="Bangalore">Date Set</option>
         <option value="Hyderabad">Date Not Set</option>
         <option value="Mumbai">Onboarded Succesfully</option>
