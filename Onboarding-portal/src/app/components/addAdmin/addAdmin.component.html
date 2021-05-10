@@ -6,19 +6,19 @@
       <div class="form-group">
           <label> Name</label>
           <input type="text" class ="form-control" id = "name"
-              [(ngModel)] = "admin.aname" name = "name">
+              [(ngModel)] = "admin.aname" name = "name" required>
       </div>
   
       <div class="form-group">
           <label> Number</label>
           <input type="number" class ="form-control" id = "num"
-              [(ngModel)] = "admin.anum" name = "num">
+              [(ngModel)] = "admin.anum" name = "num" required>
       </div>
   
       <div class="form-group">
           <label> Email Id</label>
           <input type="text" class ="form-control" id = "email"
-              [(ngModel)] = "admin.aemail" name = "email">
+              [(ngModel)] = "admin.aemail" name = "email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
       </div>
   
       <button class = "btn btn-success" type ="submit">Submit</button>
