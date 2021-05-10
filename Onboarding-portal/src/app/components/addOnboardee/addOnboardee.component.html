@@ -1,74 +1,89 @@
-
 <div class="col-md-6 offset-md-3">
   <h3> Add Onboardee </h3>
-  <form (ngSubmit) = "onSubmit()">
-  
-      <div class="form-group">
-          <label> Name</label>
-          <input type="text" class ="form-control" id = "name"
-              [(ngModel)] = "onboardee.name" name = "name" value="Enter Name">
-      </div>
-  
-      <div class="form-group">
-          <label> Age</label>
-          <input type="tel" class ="form-control" id = "age"
-              [(ngModel)] = "onboardee.age" name = "age" value="Enter Age">
-      </div>
-  
-      <div class="form-group">
-          <label> Email Id</label>
-          <input type="text" class ="form-control" id = "emailID"
-              [(ngModel)] = "onboardee.emailID" name = "emailID" value="Email Address">
-      </div>
-  
-      <div class="form-group">
-          <label> Number</label>
-          <input type="text" class ="form-control" id = "num"
-              [(ngModel)] = "onboardee.num" name = "num" value="Enter Phone Number">
-      </div>
+  <form ngNativeValidate (ngSubmit)="onSubmit()">
 
-      <div class="form-group">
-        <label> Company</label>
-        <input type="text" class ="form-control" id = "company"
-            [(ngModel)] = "onboardee.company" name = "company" value="Enter Company">
+    <div class="form-group">
+      <label> Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="onboardee.name" name="name" value="Enter Name"
+        required>
     </div>
 
     <div class="form-group">
-        <label> Location</label>
-        <input type="text" class ="form-control" id = "location"
-            [(ngModel)] = "onboardee.location" name = "location" value="Enter Location">
+      <label> Age</label>
+      <input type="tel" class="form-control" id="age" [(ngModel)]="onboardee.age" name="age" value="Enter Age" required minlenght=10>
     </div>
 
     <div class="form-group">
-        <label> CGPA</label>
-        <input type="number" class ="form-control" id = "cgpa"
-            [(ngModel)] = "onboardee.cgpa" name = "cgpa" value= "Enter CGPA">
+      <label> Email Id</label>
+      <input type="text" class="form-control" id="emailID" [(ngModel)]="onboardee.emailID" name="emailID"
+        value="Email Address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required type="email">
     </div>
 
     <div class="form-group">
-        <label> Skills</label>
-        <input type="textarea" class ="form-control" id = "skills"
-            [(ngModel)] = "onboardee.skills" name = "skills" value= "Enter Skills">
+      <label> Number</label>
+      <input type="tel" class="form-control" id="num" [(ngModel)]="onboardee.num" name="num" value="Enter Phone Number " pattern="^\d{10}$" minlength="10"
+        required>
+    </div>
+
+    
+
+    <div class="form-group">
+      <label> Company</label>
+      <input type="text" class="form-control" id="company" [(ngModel)]="onboardee.company" name="company"
+        value="Enter Company" required>
     </div>
 
     <div class="form-group">
-        <label> DemandID</label>
-        <input type="text" class ="form-control" id = "demandID"
-            [(ngModel)] = "onboardee.demandID" name = "demandID" value= "Enter DemandID">
+      <label for="singleSelect">Location</label>
+      <select name="location" class="form-control" id="location" [(ngModel)]="onboardee.location" required>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Delhi">Delhi</option>
+      </select>
     </div>
 
     <div class="form-group">
-        <label> Background Check Status</label>
-        <input type="text" class ="form-control" id = "bgCheck"
-            [(ngModel)] = "onboardee.bgCheck" name = "bgCheck" value= "Enter Background Check Status">
+      <label> CGPA</label>
+      <input type="number" step="0.01" placeholder="0.00" class="form-control" id="cgpa" [(ngModel)]="onboardee.cgpa" name="cgpa" value="Enter CGPA"
+        required>
     </div>
 
     <div class="form-group">
-        <label> Onboarding Status</label>
-        <input type="text" class ="form-control" id = "boardingStatus"
-            [(ngModel)] = "onboardee.boardingStatus" name = "boardingStatus" value= "Enter Onboarding Status">
+      <label> Skills</label>
+      <input type="textarea" class="form-control" id="skills" [(ngModel)]="onboardee.skills" name="skills"
+        value="Enter Skills" required>
     </div>
-      <button class = "btn btn-success" type ="submit">Submit</button>
-  
+
+    <div class="form-group">
+      <label> DemandID</label>
+      <input type="text" class="form-control" id="demandID" [(ngModel)]="onboardee.demandID" name="demandID"
+        value="Enter DemandID" required>
+    </div>
+
+    <div class="form-group">
+      <label>Background Check Status</label>
+      <select name="bgCheck" class="form-control" id="bgCheck" [(ngModel)]="onboardee.bgCheck" required>
+        <option value="Mumbai">Approved</option>
+        <option value="Bangalore">Not Verified</option>
+        <option value="Hyderabad">In Progress</option>
+        <option value="Chennai">Falsified Data</option>
+        <option value="Delhi">Pending</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label> Onboarding Status</label>
+      <select name="bgCheck" class="form-control" id="bgCheck" [(ngModel)]="onboardee.boardingStatus">
+        <option value="Bangalore">Date Set</option>
+        <option value="Hyderabad">Date Not Set</option>
+        <option value="Mumbai">Onboarded Succesfully</option>
+        <option value="Chennai">Onboarding Failed</option>
+        <option value="Delhi">Pending</option>
+      </select>
+    </div><br>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+
   </form>
-  </div> 
+</div>
